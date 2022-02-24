@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <title>Invoice</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+</head>
+<body>
+    <div id="invoice">
+    <div id="content">
+    <h1>Invoice</h1>
+    <h2>for Order id: {{order_id}}</h2>
+    <h3>Date: {{date}}</h3>
+    <table>
+        <tr>
+            <th>Product Nmae</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Sub Total</th>
+        </tr>
+        {{#each invoices}}
+        <tr>
+            <td>{{title}}</td>
+            <td>{{quantity}}</td>
+            <td>{{price}}</td>
+            <td>{{total_amount}}</td>
+        </tr>
+        {{/each}}
+    </table>
+    <h2>Total Amount: {{totalAmount}}</h2>
+    </div>
+    <div id="editor"></div>
+    <button id="cmd">Download Invoice</button>
+    </div>
+    <script src="../JS/script.js"></script>
+</body>
+</html>
