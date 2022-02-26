@@ -1,14 +1,12 @@
-var doc = new jsPDF();
-var specialElementHandlers = {
-  '#editor': function (element, renderer) {
-    return true;
-  },
-};
+// const downloadInvoice = () => {
+//   let doc = new jsPDF();
+//   let source = window.document.getElementById('content');
+//   doc.fromHTML(source, 25, 25);
+//   doc.save('invoice.pdf');
+// };
 
-$('#cmd').click(function () {
-  doc.fromHTML($('#content').html(), 30, 15, {
-    width: 170,
-    elementHandlers: specialElementHandlers,
-  });
-  doc.save('invoice.pdf');
-});
+// const downloadInvoice = () => {
+//   fetch('http://localhost:3015/invoices/file', {
+//   method: 'GET'
+// })
+// };
