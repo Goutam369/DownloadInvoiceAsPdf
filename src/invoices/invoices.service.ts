@@ -1,10 +1,8 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { OrdersRepository } from './dto/orders.repository';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Order } from './dto/order.entity';
 import * as puppeteer from 'puppeteer';
-import * as fs from 'fs';
-import { join } from 'path/posix';
 
 @Injectable()
 export class InvoicesService {
@@ -22,10 +20,9 @@ export class InvoicesService {
 
     const browser = await puppeteer.launch({ headless: true });
     const page = await browser.newPage();
-    // console.log(__dirname);
-    page.addStyleTag({
-      path: __dirname + '/../../public/CSS/certificateStyle.css',
-    });
+    // page.addStyleTag({
+    //   path: __dirname + '/../../public/CSS/certificateStyle.css',
+    // });
     await page.setContent(content);
     // await page.goto(`http://localhost:3015/invoices/url/${id}`, {
     //   waitUntil: 'networkidle2',
