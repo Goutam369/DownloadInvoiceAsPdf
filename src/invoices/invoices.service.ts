@@ -22,6 +22,10 @@ export class InvoicesService {
 
     const browser = await puppeteer.launch({ headless: true });
     const page = await browser.newPage();
+    // console.log(__dirname);
+    page.addStyleTag({
+      path: __dirname + '/../../public/CSS/certificateStyle.css',
+    });
     await page.setContent(content);
     // await page.goto(`http://localhost:3015/invoices/url/${id}`, {
     //   waitUntil: 'networkidle2',

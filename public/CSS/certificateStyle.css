@@ -1,0 +1,64 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+
+#main{
+    text-align: center;
+    /* max-width: 45vw; */
+    max-width: 80vw;
+}
+
+.leftAlgn{
+    text-align: left;
+}
+
+h1{
+    /* font-size: 2rem; */
+    font-size: 1.7rem;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+table{
+    width: 100%;
+    table-layout : fixed;
+}
+
+th{
+    text-align: center;
+}
+
+#tab1{
+    text-align: left;
+}
+
+#tab1 td{
+    vertical-align: top;
+}
+
+/* .tdpad{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+} */
+
+h3{
+    font-weight: normal;
+}
+
+td
+{
+ /* max-width: 100px; */
+ /* overflow: hidden; */
+ /* text-overflow: ellipsis; */ 
+ /* white-space: nowrap; */
+ word-wrap: break-word;
+ padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}

@@ -53,7 +53,8 @@ export class InvoicesController {
       date: date,
     };
 
-    const rest = await compile('index', data);
+    // const rest = await compile('index', data);
+    const rest = await compile('certificateOfConformance', data);
     const pdf = await this.invoicesService.generatePDF(rest);
 
     res.send(pdf);
